@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <errno.h>
+
+int main(int argc, char *argv[]){
+
+  //this program will mimic the cp linux/unix command using source.txt to destination.txt as
+  //as arguments.
+
+  char* sourcePath = argv[1];
+  char* destination = argv[2];
+  char buffer[1000];
+  int returnval;
+  int fd;
+
+  returnval = access (sourcePath, F_OK);
+
+  if(returval == -1)
+   {
+    printf("file %s was not found", argv[1]);
+    return 0;
+   }
+
+  fd = open(destination, O_RDONLY|O_CREAT);
+
+  //read file into a buffer
+  //write file to destination
+  //close source
+  //close destination
+
+  
+  
+  
+}

@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 {
 
 	int status;
-	pid_t pid;
+	pid_t pid;																																																																
 	int child = fork();
 	pid = waitpid(child,&status,0);
 	if(child == 0)
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
 
 	}
 	else{
-
+		
 		int child2 = fork();
 		pid = waitpid(child2,&status,0);
 		if(child2 == 0)

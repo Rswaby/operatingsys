@@ -1,0 +1,47 @@
+#Brief explanation for part2 of task 2
+#Rohan Swaby
+#=======================================================================
+
+In the main program we start off by defining some int variables 
+---> a = 10, b = 25
+
+the first time fork() is called 
+a and b are the same, however everthing after the --> fq = fork() 
+will run INDEPENDTLY. 
+
+when (fq != 0){
+	### parent ####
+	this block of code will be the first to executed. 
+	++ update b = 10+25-5 => 30 
+	display a = 10 and b = 30
+	}	
+
+When (fq == 0) {
+	######### CHILD(fq) ############
+	here execute code that belongs to the child process...
+	++++ update a = 10+25//
+	display a = 35. b = 25
+
+	
+	when(fr != 0){
+		##### CHILD(fq) #####
+		this means we are still in child process or the parent of fr
+		+++ update b = 25+20 
+		display a = 35 and b = 45
+	}
+
+	when(fr == 0){
+		######## GRANDCHILD(fr) ########
+		then inside this process we create a new process R which is going to be a child of the fq and a "grandchild"
+		to the main process.
+	
+		here the values are inherited form the child a = 35 and b = 25
+		when when fr == 0 (else block) we are still inside the grandchild 
+		++++ update a = (35 * 25)+30 ---> 905 
+		display a = 905 and b = 25
+	}
+ 
+	
+	
+	
+

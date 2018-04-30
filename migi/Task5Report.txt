@@ -1,0 +1,23 @@
+MIGUEL DOMINGUEZ
+TASK 5
+REPORT ABOUT CRITICAL SECTION 
+CORCERNING THE FATHER AND SON PROBLEM
+
+In this problem we find ourselves analysing what occurs when multiple processes try to access a single
+resource in the system, such thing is defined as a race condtion that we would like to avoid in many cases
+since in the critical section only one process should occupy the critical section or single variable while
+others should wait some time in order to use it. We face this problem in coding and explain why our solution
+makes an attempt to correct the initial code given to us. To our disposal we have an essential tool which is
+the semaphore, we learned that it is used in preventing the race condtions and it allows process to enter the
+critical sention part but we need to be careful to specify exactly where a process enters and where it exits 
+the critical section. The very first building block of the program is to let the father procedure take over, 
+while the sons are waiting outside in order to enter the critical section. Once the father is done, or has
+deposited money, the first child to draw money is son two which is outside waiting to enter the section. In 
+the code we accomplish this with a pair of if statements that check whether the process can enter and at the end
+we especify where it should leave. In a very similar manner, the pair of if statements check for procedure son one
+and son 2, as they wait outide the critical section time needs to be added to the especified variables. THe
+sons will constatly draw money and keep swithcing the procedures among themselves until there is no money and
+the father procedure is ready to take over again and deposit money. When reaching a balance of zero in the bak
+or just such value becomes null the father procedure waits for the son procedures to end with the wait function 
+and at the end when the code is run it can be seen  the waiting time for each of the procedures as they were
+trying to enter the critical section.

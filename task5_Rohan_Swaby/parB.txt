@@ -1,0 +1,4 @@
+Rohan Task5B
+
+This Task is similar to the readers-writers problem in the text. This solution does require a mutex or semphore in order to have some mutual exclusion.
+There is a possiblity of threads writing to the same file without a mutex or semaphore

@@ -1,0 +1,4 @@
+Rohan Swaby
+
+A: there can be race conditions with this solution if both threads try to update
+any of the shared resource at the same time. If this solution uses semaphore then deadlock could be possible. To protect the memory object a sem or mutex could be used

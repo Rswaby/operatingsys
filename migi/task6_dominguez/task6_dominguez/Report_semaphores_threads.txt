@@ -1,0 +1,23 @@
+MIGUEL DOMINGUEZ
+TASK 6
+CIGARRETE SMOKERs PROBLEM
+REPORT
+
+In this lab we are experimenting with semaphores and threads and we would like to know how
+to accomplish the same task using both. To start, we introduce a problem where we have three
+smokers and an agent. Each smoker has only one material, which are tabaco, paper or match. 
+The agent has infinite amount of them and can provide for the missing two ingredients to any
+smoker and thus the smoker is able to take a smoke. Now, such procedure must be implemented 
+using semaphores and threads. First we start with semaphores. In this solution we work the the
+sem.h file that was given to us. With the help of it, we can create semaphores and initialize 
+them for each smoker and the agent. In this way, we deal with a critical section that lets one
+smoker be in the critical section and then change to the agent to provide the smoker with the
+missing ingredients. In the same way, the other smokers are able to smoke when the agent provides
+what they need. The agent function uses a random number generator to pick which of the two materials
+it will give to the smoker. Eventually, this process using semaphores can go forever but for our
+convenien we only do ten iterations of that. Now on the other side, we need to implement the same 
+solution but with threads. We start by defining fuctions for each smoker and the agent. The fuctions
+will go into the threads when created, notice that each thread creation will return a value to a 
+variable. The threads will work very similar to the semaphores in that they let the agent provide 
+for the missing materials and then wake up the smokers in order to accomplish their task. From my
+understanding, it seems that threads are more effective than the semaphores. 
